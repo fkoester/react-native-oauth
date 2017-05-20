@@ -415,6 +415,7 @@ class OAuthManagerModule extends ReactContextBaseJavaModule {
 
     WritableMap credentials = Arguments.createMap();
     credentials.putString("accessToken", accessToken.getToken());
+    credentials.putString("authTokenSecret", (String)accessToken.getParameter("oauth_token_secret"));
     credentials.putString("type", tokenType);
     // credentials.putString("scope", accessToken.getScope());
     credentials.putString("consumerKey", consumerKey);
